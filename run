@@ -1,0 +1,13 @@
+#!/bin/bash
+set -eo pipefail
+[[ -n "$TOKEN" ]] && { export RED_TOKEN="$TOKEN"; }
+[[ -n "$EMAIL" ]] && { export RED_EMAIL="$EMAIL"; }
+[[ -n "$PASSWORD" ]] && { export RED_PASSWORD="$PASSWORD"; }
+exec "$PYTHON_EXECUTABLE" \
+  red.py \
+  --no-prompt \
+  --owner "$OWNER" \
+  --prefix "$PREFIX" \
+  --admin-role "$ADMIN_ROLE" \
+  --mod-role "$MOD_ROLE" \
+  --memory-only
