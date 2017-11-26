@@ -13,7 +13,7 @@ RUN apt-get update \
       zlib1g-dev \
  && rm -rf /var/lib/apt/lists/*
 
-ARG PYTHON_VERSION=3.6.2
+ARG PYTHON_VERSION=3.6.3
 
 RUN mkdir -p /python \
  && cd /python \
