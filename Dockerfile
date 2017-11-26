@@ -32,7 +32,7 @@ RUN wget https://bootstrap.pypa.io/get-pip.py \
  && "$PYTHON_EXECUTABLE" get-pip.py
 
 RUN git clone -b develop --single-branch \
-      https://github.com/Twentysix26/Red-DiscordBot.git \
+      https://github.com/Cog-Creators/Red-DiscordBot.git \
       /usr/src \
  && cd /usr/src \
  && "$PYTHON_EXECUTABLE" -m pip install -r requirements.txt
